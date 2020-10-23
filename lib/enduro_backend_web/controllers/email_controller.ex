@@ -14,6 +14,7 @@ defmodule EnduroBackendWeb.EmailController do
   end
 
   def create(conn, %{"email" => email_params}) do
+    IO.inspect(email_params)
     {:ok, text_body} = Map.fetch(email_params, "text_body")
     {:ok, description} = Map.fetch(email_params, "description")
 

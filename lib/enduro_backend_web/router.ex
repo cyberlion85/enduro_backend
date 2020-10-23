@@ -11,12 +11,15 @@ defmodule EnduroBackendWeb.Router do
 
   pipeline :api do
     plug :accepts, ["json"]
+    plug CORSPlug, origin: "*"
   end
 
   scope "/", EnduroBackendWeb do
     pipe_through :api
 
-    resources "/emails", EmailController, except: [:new, :edit]
+    # resources "/emails", EmailController, except: [:new, :edit]
+    post "/emails", EmailController, :create
+    options "/emails", EmailController, :options
   end
 
   # Other scopes may use custom stacks.
