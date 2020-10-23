@@ -13,14 +13,20 @@ defmodule EnduroBackendWeb.EmailController do
     |> json(%{successfully_uploaded: "good", upload_error: "bad"})
   end
 
-  # def create(conn, %{"email" => email_params}) do
-  #   with {:ok, %Email{} = email} <- Post.create_email(email_params) do
-  #     conn
-  #     |> put_status(:created)
-  #     |> put_resp_header("location", Routes.email_path(conn, :show, email))
-  #     |> render("show.json", email: email)
-  #   end
-  # end
+  def create(conn, %{"email" => email_params}) do
+      # emails = Post.list_emails()
+      # with {:ok, %Email{} = email} <- Post.create_email(email_params) do
+      conn
+      |> put_status(:created)
+      |> json(%{email_sent: "good"})
+      # end
+    # with {:ok, %Email{} = email} <- Post.create_email(email_params) do
+    #   conn
+    #   |> put_status(:created)
+    #   |> put_resp_header("location", Routes.email_path(conn, :show, email))
+    #   |> render("show.json", email: email)
+    # end
+  end
 
   # def show(conn, %{"id" => id}) do
   #   email = Post.get_email!(id)
