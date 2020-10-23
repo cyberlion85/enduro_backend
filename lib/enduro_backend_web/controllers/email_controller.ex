@@ -1,7 +1,7 @@
 defmodule EnduroBackendWeb.EmailController do
   use EnduroBackendWeb, :controller
 
-  # alias EnduroBackend.Post
+  alias EnduroBackend.Post
   # alias EnduroBackend.Post.Email
 
   action_fallback EnduroBackendWeb.FallbackController
@@ -14,18 +14,14 @@ defmodule EnduroBackendWeb.EmailController do
   end
 
   def create(conn, %{"email" => email_params}) do
-      # emails = Post.list_emails()
-      # with {:ok, %Email{} = email} <- Post.create_email(email_params) do
+    {:ok, text_body} = Map.fetch(email_params, "text_body")
+    {:ok, description} = Map.fetch(email_params, "description")
+
+    with :ok <- Post.create_email(text_body, description) do
       conn
       |> put_status(:created)
-      |> json(%{email_sent: "good"})
-      # end
-    # with {:ok, %Email{} = email} <- Post.create_email(email_params) do
-    #   conn
-    #   |> put_status(:created)
-    #   |> put_resp_header("location", Routes.email_path(conn, :show, email))
-    #   |> render("show.json", email: email)
-    # end
+      |> json(%{text_body: text_body, description: description})
+    end
   end
 
   # def show(conn, %{"id" => id}) do

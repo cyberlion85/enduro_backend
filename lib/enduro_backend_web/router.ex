@@ -14,9 +14,8 @@ defmodule EnduroBackendWeb.Router do
   end
 
   scope "/", EnduroBackendWeb do
-    pipe_through :browser
+    pipe_through :api
 
-    get "/", PageController, :index
     resources "/emails", EmailController, except: [:new, :edit]
   end
 

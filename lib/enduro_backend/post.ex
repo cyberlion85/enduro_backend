@@ -9,10 +9,10 @@ defmodule EnduroBackend.Post do
   end
 
   def create_email(text_body, description) do
-    # text_body = "bla bla bla"
-    # description = "about"
+    IO.puts("send email!")
     params = "echo #{text_body} | mail -s #{description} s.persanov@gmail.com"
     params |> String.to_charlist() |> :os.cmd()
+    :ok
     # IO.puts('email')
   end
 end
