@@ -11,7 +11,7 @@
           <v-hover>
             <template v-slot="{ hover }">
               <v-card
-                :img="`/static/enduro/photos/${project.img}`"
+                :img="`/static/images/photos/${project.img}`"
                 class="white--text overflow-hidden"
                 dark
                 height="300"
@@ -41,7 +41,7 @@
         <v-carousel-item
           v-for="(project, i) in projects"
           :key="i"
-          :src="`/static/enduro/photos/${project.img}`"
+          :src="`/static/images/photos/${project.img}`"
           reverse-transition="fade-transition"
           transition="fade-transition"
         ></v-carousel-item>

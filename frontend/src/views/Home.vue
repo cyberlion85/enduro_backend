@@ -10,7 +10,7 @@
 
         <v-responsive class="mx-auto mb-8" width="56"> </v-responsive>
         <v-avatar class="elevation-12 mb-12" size="128">
-          <v-img src="/static/enduro/6.jpg"></v-img>
+          <v-img src="/static/images/6.jpg"></v-img>
         </v-avatar>
         <v-responsive
           class="mx-auto title font-weight-light mb-8"
@@ -258,7 +258,7 @@
           <v-col cols="12" md="6">
             <v-sheet elevation="14" max-width="500" class="mx-auto">
               <v-img
-                src="static/enduro/5.jpg"
+                src="static/images/5.jpg"
                 gradient="to right, rgba(160, 90, 70, .05), rgba(30, 40,
               30, .1)"
                 width="100%"
@@ -336,7 +336,7 @@
           <v-col cols="12" md="6">
             <v-sheet elevation="14" max-width="500" class="mx-auto">
               <v-img
-                src="static/enduro/learning.jpg"
+                src="static/images/learning.jpg"
                 gradient="to right, rgba(160, 90, 70, .05), rgba(30, 40,
               30, .1)"
                 width="100%"
@@ -580,19 +580,19 @@ export default {
     ],
     items: [
       {
-        src: "/static/enduro/2.jpg",
+        src: "/static/images/2.jpg",
       },
       {
-        src: "/static/enduro/6.jpg",
+        src: "/static/images/6.jpg",
       },
       {
-        src: "/static/enduro/3.jpg",
+        src: "/static/images/3.jpg",
       },
       {
-        src: "/static/enduro/8.jpg",
+        src: "/static/images/8.jpg",
       },
       {
-        src: "/static/enduro/9.jpg",
+        src: "/static/images/9.jpg",
       },
     ],
 
@@ -601,26 +601,26 @@ export default {
         header: "Yamaha serow 225",
         text:
           "Ещё один легендарный японский эндуро. Надёжен, обладает великолепной тягой, простотой в обращении. Прокат этого мотоцикла приходится по вкусу невысоким райдерам и девушкам.",
-        src: require("@/assets/9.jpg"),
-        // src: "static/enduro/bikes/serow1.jpg",
+        // src: require("@/assets/9.jpg"),
+        src: "static/images/bikes/serow1.jpg",
       },
       {
         header: "BSE J1",
         text:
           "Легкий, быстрый, мощный, надёжный, простой в управлении и эксплуатации кроссовый мотоцикл по доступной цене. BSE J1-250e 21/18 отлично подойдет, как новичкам, только начинающим постигать мир мотокросса и знакомиться с мотоциклом, так и кроссменам с опытом.",
-        src: "static/enduro/bikes/bse2.jpg",
+        src: "static/images/bikes/bse2.jpg",
       },
       {
         header: "Avantis Enduro 250 (172)",
         text:
           "Шедевр китайского мотостроения. Эндуро Avantis воплотил в себе симбиоз геометрии рамы КТМ, надёжного двигателя и хорошей подвески. Ценный и очень интересный аппарат.",
-        src: "static/enduro/bikes/avantis1.jpg",
+        src: "static/images/bikes/avantis1.jpg",
       },
       {
         header: "Honda xr 250",
         text:
           "Легенда японской мотопромышленности. Этот мотоцикл способен порадовать любого, даже самого изысканного райдера.",
-        src: "static/enduro/bikes/hodaxr1.jpg",
+        src: "static/images/bikes/hodaxr1.jpg",
       },
     ],
   }),

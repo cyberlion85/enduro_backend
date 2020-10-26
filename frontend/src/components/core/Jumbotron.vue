@@ -54,8 +54,10 @@ export default {
     image() {
       // return "https://3dnews.ru/assets/external/illustrations/2020/10/25/1023765/01.jpg";
       // return "04.jpg";
-      return "http://localhost:4001/api/image/9.jpg";
+      // return "http://localhost:4001/api/image/9.jpg";
+      return "static/images/9.jpg";
       // return require("@/assets/9.jpg");
+      // return require("/home/user/code/cg/web/enduro_backend/frontend/public/static/images/9.jpg");
     },
     subtitle() {
       return "Чем мы занимаемся? Смотри ниже :)";

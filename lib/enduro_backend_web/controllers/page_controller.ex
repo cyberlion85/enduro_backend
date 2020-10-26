@@ -10,7 +10,7 @@ defmodule EnduroBackendWeb.PageController do
   def index(conn, _params) do
     file = get_index_file(Application.get_env(:enduro_backend, :static_files))
 
-    IO.inspect(file)
+    # IO.inspect(file)
     {:ok, binary} = File.read(file)
     html(conn, binary)
   end

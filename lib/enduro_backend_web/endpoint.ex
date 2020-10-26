@@ -26,8 +26,9 @@ defmodule EnduroBackendWeb.Endpoint do
     # from: {:enduro_backend, "priv/frontend"},
     from: Application.compile_env(:enduro_backend, :static_files, :enduro_backend),
     gzip: false,
-    only: ~w(css fonts images js favicon.ico robots.txt),
-    only_matching: ["precache-manifest"]
+    only: ~w(css fonts static images js favicon.ico robots.txt)
+
+  # only_matching: ["precache-manifest"]
 
   # Code reloading can be explicitly enabled under the
   # :code_reloader configuration of your endpoint.

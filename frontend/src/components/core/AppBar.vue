@@ -12,7 +12,7 @@
       alt="Alpha Construction"
       class="shrink"
       max-width="100"
-      src="/static/enduro/logo_invert.png"
+      src="/static/images/logo_invert.png"
     />
     <v-spacer />
     <v-toolbar-items v-if="$vuetify.breakpoint.mdAndUp">
