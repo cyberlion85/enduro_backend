@@ -69,7 +69,7 @@ export default {
 
       var config = {
         method: "post",
-        url: "http://84.38.183.216:4000/emails",
+        url: "http://84.38.183.216:4001/api/emails",
         data: data,
       };
 
