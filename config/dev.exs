@@ -1,7 +1,7 @@
 use Mix.Config
 
-config :enduro_backend, static_files: "enduro_site/dist"
-# config :phoenix_live_reload, dirs: ['', Path.expand('../enduro_site/dist')]
+config :enduro_backend, static_files: "frontend/dist"
+# config :phoenix_live_reload, dirs: ['', Path.expand('../frontend/dist')]
 
 # For development, we disable any cache and enable
 # debugging and code reloading.
@@ -44,7 +44,7 @@ config :enduro_backend, EnduroBackendWeb.Endpoint,
 config :enduro_backend, EnduroBackendWeb.Endpoint,
   live_reload: [
     patterns: [
-      ~r"enduro_site/dist/.*(html|js|css|png|jpeg|jpg|gif|svg)$",
+      ~r"frontend/dist/.*(html|js|css|png|jpeg|jpg|gif|svg)$",
       ~r"priv/gettext/.*(po)$",
       ~r"lib/enduro_backend_web/(live|views)/.*(ex)$",
       ~r"lib/enduro_backend_web/templates/.*(eex)$"

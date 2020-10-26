@@ -4,7 +4,7 @@ defmodule EnduroBackendWeb.PageController do
   # def index(conn, _params) do
   #   conn
   #   |> put_resp_header("content-type", "text/html; charset=utf-8")
-  #   |> Plug.Conn.send_file(200, "priv/enduro_site/index.html")
+  #   |> Plug.Conn.send_file(200, "priv/frontend/index.html")
   #   |> halt()
   # end
   def index(conn, _params) do

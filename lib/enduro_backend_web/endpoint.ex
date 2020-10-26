@@ -23,7 +23,7 @@ defmodule EnduroBackendWeb.Endpoint do
   plug Plug.Static,
     at: "/",
     # from: :enduro_backend,
-    # from: {:enduro_backend, "priv/enduro_site"},
+    # from: {:enduro_backend, "priv/frontend"},
     from: Application.compile_env(:enduro_backend, :static_files, :enduro_backend),
     gzip: false,
     only: ~w(css fonts images js favicon.ico robots.txt),
