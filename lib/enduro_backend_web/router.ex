@@ -11,7 +11,7 @@ defmodule EnduroBackendWeb.Router do
 
   pipeline :api do
     plug :accepts, ["json"]
-    plug CORSPlug, origin: "*"
+    # plug CORSPlug, origin: "*"
   end
 
   scope "/api", EnduroBackendWeb do
@@ -20,7 +20,7 @@ defmodule EnduroBackendWeb.Router do
     resources "/emails", EmailController, except: [:new, :edit]
     get "/image/:id", ImageController, :showImage
     # post "/emails", EmailController, :create
-    options "/emails", EmailController, :options
+    # options "/emails", EmailController, :options
   end
 
   scope "/", EnduroBackendWeb do
