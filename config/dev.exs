@@ -1,5 +1,8 @@
 use Mix.Config
 
+config :enduro_backend, static_files: "enduro_site/dist"
+# config :phoenix_live_reload, dirs: ['', Path.expand('../enduro_site/dist')]
+
 # For development, we disable any cache and enable
 # debugging and code reloading.
 #
@@ -7,19 +10,11 @@ use Mix.Config
 # watchers to your application. For example, we use it
 # with webpack to recompile .js and .css sources.
 config :enduro_backend, EnduroBackendWeb.Endpoint,
-  http: [port: 4000],
+  http: [port: 4001],
   debug_errors: true,
   code_reloader: true,
   check_origin: false,
-  watchers: [
-    node: [
-      "node_modules/webpack/bin/webpack.js",
-      "--mode",
-      "development",
-      "--watch-stdin",
-      cd: Path.expand("../assets", __DIR__)
-    ]
-  ]
+  watchers: []
 
 # ## SSL Support
 #
@@ -49,7 +44,7 @@ config :enduro_backend, EnduroBackendWeb.Endpoint,
 config :enduro_backend, EnduroBackendWeb.Endpoint,
   live_reload: [
     patterns: [
-      ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",
+      ~r"enduro_site/dist/.*(html|js|css|png|jpeg|jpg|gif|svg)$",
       ~r"priv/gettext/.*(po)$",
       ~r"lib/enduro_backend_web/(live|views)/.*(ex)$",
       ~r"lib/enduro_backend_web/templates/.*(eex)$"

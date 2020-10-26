@@ -14,12 +14,19 @@ defmodule EnduroBackendWeb.Router do
     plug CORSPlug, origin: "*"
   end
 
-  scope "/", EnduroBackendWeb do
+  scope "/api", EnduroBackendWeb do
     pipe_through :api
 
-    # resources "/emails", EmailController, except: [:new, :edit]
-    post "/emails", EmailController, :create
+    resources "/emails", EmailController, except: [:new, :edit]
+    get "/image/:id", ImageController, :showImage
+    # post "/emails", EmailController, :create
     options "/emails", EmailController, :options
+  end
+
+  scope "/", EnduroBackendWeb do
+    pipe_through :browser
+
+    get "/*path", PageController, :index
   end
 
   # Other scopes may use custom stacks.

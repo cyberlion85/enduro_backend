@@ -22,9 +22,12 @@ defmodule EnduroBackendWeb.Endpoint do
   # when deploying your static files in production.
   plug Plug.Static,
     at: "/",
-    from: :enduro_backend,
+    # from: :enduro_backend,
+    # from: {:enduro_backend, "priv/enduro_site"},
+    from: Application.compile_env(:enduro_backend, :static_files, :enduro_backend),
     gzip: false,
-    only: ~w(css fonts images js favicon.ico robots.txt)
+    only: ~w(css fonts images js favicon.ico robots.txt),
+    only_matching: ["precache-manifest"]
 
   # Code reloading can be explicitly enabled under the
   # :code_reloader configuration of your endpoint.

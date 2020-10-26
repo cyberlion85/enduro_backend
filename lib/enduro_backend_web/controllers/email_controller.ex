@@ -2,7 +2,6 @@ defmodule EnduroBackendWeb.EmailController do
   use EnduroBackendWeb, :controller
 
   alias EnduroBackend.Post
-  # alias EnduroBackend.Post.Email
 
   action_fallback EnduroBackendWeb.FallbackController
 
@@ -25,24 +24,5 @@ defmodule EnduroBackendWeb.EmailController do
     end
   end
 
-  # def show(conn, %{"id" => id}) do
-  #   email = Post.get_email!(id)
-  #   render(conn, "show.json", email: email)
-  # end
 
-  # def update(conn, %{"id" => id, "email" => email_params}) do
-  #   email = Post.get_email!(id)
-
-  #   with {:ok, %Email{} = email} <- Post.update_email(email, email_params) do
-  #     render(conn, "show.json", email: email)
-  #   end
-  # end
-
-  # def delete(conn, %{"id" => id}) do
-  #   email = Post.get_email!(id)
-
-  #   with {:ok, %Email{}} <- Post.delete_email(email) do
-  #     send_resp(conn, :no_content, "")
-  #   end
-  # end
 end
