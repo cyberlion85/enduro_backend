@@ -5,7 +5,11 @@
 # is restricted to this project.
 
 # General application configuration
-use Mix.Config
+import Config
+
+if Mix.env() != "prod" do
+  import_config "releases.exs"
+end
 
 # Configures the endpoint
 config :enduro_backend, EnduroBackendWeb.Endpoint,

@@ -10,8 +10,27 @@ defmodule EnduroBackend.MixProject do
       compilers: [:phoenix, :gettext] ++ Mix.compilers(),
       start_permanent: Mix.env() == :prod,
       aliases: aliases(),
-      deps: deps()
+      deps: deps(),
+      releases: [
+        enduro_backend: [
+          include_executables_for: [:unix],
+          steps: [:assemble, &copy_extra_files/1]
+        ]
+      ]
     ]
+  end
+
+  def copy_extra_files(release) do
+    IO.puts("Copying frontend files...")
+    source = Path.join(["frontend", "dist"])
+
+    target = Path.join([release.path, "lib", "enduro_backend-0.1.0", "priv", "static"])
+    File.mkdir_p!(target)
+    IO.inspect(source)
+    IO.inspect(target)
+
+    File.cp_r!(source, target)
+    release
   end
 
   # Configuration for the OTP application.

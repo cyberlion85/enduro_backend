@@ -1,7 +1,7 @@
-use Mix.Config
+import Config
 
 config :enduro_backend, static_files: "frontend/dist"
-# config :phoenix_live_reload, dirs: ['', Path.expand('../frontend/dist')]
+config :phoenix_live_reload, dirs: ['', Path.expand('frontend/dist')]
 
 # For development, we disable any cache and enable
 # debugging and code reloading.
