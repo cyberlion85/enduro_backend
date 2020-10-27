@@ -10,7 +10,7 @@ config :phoenix_live_reload, dirs: ['', Path.expand('frontend/dist')]
 # watchers to your application. For example, we use it
 # with webpack to recompile .js and .css sources.
 config :enduro_backend, EnduroBackendWeb.Endpoint,
-  http: [port: 4001],
+  http: [port: 80],
   debug_errors: true,
   code_reloader: true,
   check_origin: false,
